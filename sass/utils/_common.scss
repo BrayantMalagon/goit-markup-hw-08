@@ -1,0 +1,11 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-black);
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,127 @@
+.footer {
+  background-color: $banner-color;
+  height: 252px;
+  display: flex;
+  align-items: center;
+}
+.footer-main {
+  display: flex;
+}
+
+/* ----- footer sección dirección ------ */
+.footer-address {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  &__list {
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+  }
+  &__link {
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 250ms $cubic;
+  }
+  &__link:hover {
+    color: $main-color;
+  }
+}
+/* ----- footer sección redes ------ */
+.container-social-networks {
+  display: flex;
+  flex-direction: column;
+}
+.footer-social-networks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__bg {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: background-color 250ms $cubic;
+  }
+  &__icon {
+    fill: white;
+    width: 20px;
+    height: 20px;
+  }
+  &__bg:hover {
+    background-color: $main-color;
+    cursor: pointer;
+  }
+}
+.footer-subscription {
+  width: 570px;
+  height: 86px;
+  margin-left: 93px;
+}
+.text-footer-social-networks {
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* ------ Suscripción ------- */
+.form-subscription {
+  width: 100%;
+  display: flex;
+  &__label {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: $banner-color;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    outline: none;
+    background-color: $banner-color;
+    border: none;
+    margin-left: 16px;
+  }
+}
+.btn-telegram {
+  width: 200px;
+  height: 50px;
+  background: $main-color;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-telegram:hover,
+.form-subscription__label {
+  cursor: pointer;
+}
+.icon-telegram {
+  width: 24px;
+  height: 24px;
+  fill: white;
+  margin-left: 20px;
+}

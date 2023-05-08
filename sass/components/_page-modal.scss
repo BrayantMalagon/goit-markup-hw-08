@@ -1,0 +1,163 @@
+.backdrop {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 250ms $cubic;
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background-color: white;
+  position: fixed;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: visible;
+  pointer-events: none;
+}
+.icon-modal {
+  width: 11px;
+  height: 11px;
+  fill: $text-black;
+  transition: fill 250ms $cubic;
+}
+.close-modal {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  margin-left: 91%;
+  padding: 0%;
+  &:hover,
+  &:hover .icon-modal {
+    cursor: pointer;
+    fill: $main-color;
+  }
+}
+/* ------ Formulario Modal ------ */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  & h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23.44px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: $text-grey;
+    margin-bottom: 10px;
+    margin-top: 4px;
+  }
+  &__label:hover {
+    cursor: pointer;
+  }
+  &__label:hover &__box {
+    border: 1px solid $main-color;
+  }
+  &__label:hover &__icons {
+    fill: $main-color;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    transition: border 250ms $cubic;
+  }
+  &__icons {
+    width: 12px;
+    height: 12px;
+    fill: $text-black;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: fill 250ms $cubic;
+  }
+  &__input {
+    border: 1px solid rgba(255, 255, 255, 0);
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: $text-black;
+    outline: none;
+  }
+  &__feedback {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+  &__text {
+    width: 94%;
+    height: 88%;
+    margin-top: 12px;
+    margin-left: 16px;
+    outline: none;
+    border: none;
+  }
+  &__politics {
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__politics:hover {
+    cursor: pointer;
+  }
+  &__politics p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: $text-grey;
+    width: 400px;
+    margin-top: -1px;
+    margin-left: 10px;
+  }
+}
+.form-button-submit {
+  width: 200px;
+  height: 50px;
+  background-color: $main-color;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover {
+    cursor: pointer;
+  }
+}

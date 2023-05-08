@@ -1,0 +1,72 @@
+.section-team {
+  background-color: #f5f4fa;
+}
+.third-section-subtitle {
+  font-family: 'Roboto', sans-serif;
+  color: $text-black;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 74px;
+  margin-bottom: 50px;
+}
+.card-team {
+  display: flex;
+  justify-content: space-between;
+  &__box {
+    text-align: center;
+    background-color: white;
+    margin-bottom: 94px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  &__names {
+    font-family: 'Roboto', sans-serif;
+    color: $text-black;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  &__images {
+    width: 270px;
+  }
+  &__post {
+    font-family: 'Roboto', sans-serif;
+    color: $text-grey;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+.card-team-box-icons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  &__bg {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: background-color 250ms $cubic;
+  }
+  &__bg:hover {
+    background-color: $main-color;
+    cursor: pointer;
+  }
+
+  &__bg:hover &__icon {
+    fill: white;
+  }
+  &__icon {
+    fill: $text-grey;
+    width: 20px;
+    height: 20px;
+    transition: fill 250ms $cubic;
+  }
+}

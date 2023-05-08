@@ -1,0 +1,41 @@
+.second-section-subtitle {
+  font-family: 'Roboto', sans-serif;
+  color: $text-black;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  margin: 0px 0px 55px 0px;
+}
+.card-images {
+  list-style: none;
+  margin: 0px 0px 94px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'roboto';
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  /*---Posicionamiento relativo y absoluto---- */
+  &__item {
+    position: relative;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    width: 373.16px;
+    margin: 0px;
+  }
+  &__p {
+    background-color: rgba(47, 48, 58, 0.8);
+    padding-top: 27px;
+    padding-bottom: 27px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+  }
+}
