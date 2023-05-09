@@ -29,3 +29,25 @@
     transition: fill 250ms $cubic;
   }
 }
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .customers-box {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    &__border {
+      width: 226px;
+      height: 96px;
+      margin-bottom: 30px;
+    }
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .customers-box {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    &__border {
+      width: 210px;
+      height: 92px;
+      margin-bottom: 30px;
+    }
+  }
+}

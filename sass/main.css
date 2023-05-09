@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--text-black);
+  color: #212121;
   display: flex;
   flex-direction: column;
 }
@@ -12,6 +12,16 @@ body {
   margin-right: auto;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .container {
+    width: 769px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .container {
+    width: 480px;
+  }
+}
 .header {
   height: 80px;
   border-bottom: 1px solid #ececec;
@@ -23,7 +33,7 @@ body {
 .logo {
   font-weight: 700;
   font-size: 26px;
-  margin-right: 93px;
+  margin-right: 68px;
   color: #2196f3;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
@@ -37,12 +47,13 @@ body {
 }
 .menu__nav {
   height: 100%;
-  width: 393px;
+  display: flex;
+  align-items: center;
 }
 .menu__list {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0%;
   margin: 0%;
@@ -57,6 +68,7 @@ body {
   font-weight: 700;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0px 25px 0px 25px;
 }
 .menu__list a:hover, .menu__list a:focus {
   color: #2196f3;
@@ -81,14 +93,20 @@ body {
 }
 
 .menucontact {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /*----------- Animación de cursor ---------------*/
 }
 .menucontact__list {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
+  padding: 0%;
+  margin: 0%;
 }
 .menucontact__item {
   display: flex;
@@ -108,7 +126,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 700;
-  margin-right: 50px;
+  margin-right: 40px;
   margin-left: 10px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -120,6 +138,41 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .logo {
+    font-size: 24px;
+    margin-left: 15px;
+  }
+  .menucontact__list {
+    display: block;
+    margin-right: 15px;
+  }
+  .menucontact__link {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px 0px 5px 20px;
+    text-align: left;
+    width: 100%;
+  }
+  .menucontact__item {
+    position: relative;
+    display: block;
+  }
+  .menucontact__icon {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 5px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .menu__list {
+    display: none;
+  }
+  .menucontact {
+    display: none;
+  }
+}
 .banner {
   background-image: url(./../images/Team.jpg);
   background-repeat: no-repeat;
@@ -164,6 +217,46 @@ body {
   cursor: pointer;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .banner {
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 769px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+  .banner__title {
+    font-size: 26px;
+    line-height: 42px;
+    width: 360px;
+  }
+  .banner__button {
+    padding: 10px 20px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .banner {
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 480px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .banner__title {
+    font-size: 26px;
+    line-height: 42px;
+    width: 360px;
+  }
+  .banner__button {
+    padding: 10px 20px;
+  }
+}
 .values {
   display: flex;
   justify-content: space-between;
@@ -199,6 +292,49 @@ body {
   font-size: 14px;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .values {
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .card {
+    width: 354px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .card__bg {
+    width: 100%;
+  }
+  .card__subtitles {
+    letter-spacing: 0.03em;
+  }
+  .card__paragraph {
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .values {
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .card {
+    width: 450px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .card__bg {
+    width: 100%;
+  }
+  .card__subtitles {
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .card__paragraph {
+    letter-spacing: 0.03em;
+  }
+}
 .second-section-subtitle {
   font-family: "Roboto", sans-serif;
   color: #212121;
@@ -242,6 +378,22 @@ body {
   margin: 0px;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .second-section-subtitle {
+    display: none;
+  }
+  .card-images {
+    display: none;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .second-section-subtitle {
+    display: none;
+  }
+  .card-images {
+    display: none;
+  }
+}
 .section-team {
   background-color: #f5f4fa;
 }
@@ -316,6 +468,38 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .third-section-subtitle {
+    font-size: 28px;
+  }
+  .card-team {
+    flex-wrap: wrap;
+  }
+  .card-team__box {
+    margin-bottom: 30px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  .card-team__images {
+    width: 364px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .third-section-subtitle {
+    font-size: 28px;
+  }
+  .card-team {
+    flex-wrap: wrap;
+  }
+  .card-team__box {
+    margin-bottom: 30px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  .card-team__images {
+    width: 450px;
+  }
+}
 .customers-box {
   display: flex;
   flex-direction: row;
@@ -348,6 +532,28 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .customers-box {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .customers-box__border {
+    width: 226px;
+    height: 96px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .customers-box {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .customers-box__border {
+    width: 210px;
+    height: 92px;
+    margin-bottom: 30px;
+  }
+}
 .footer {
   background-color: #2f303a;
   height: 252px;
@@ -484,6 +690,86 @@ body {
   margin-left: 20px;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .footer {
+    height: 464px;
+  }
+  .footer-main {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 80%;
+  }
+  .footer-main .logo {
+    margin-left: 65px;
+  }
+  /* ----- footer sección dirección ------ */
+  .footer-address {
+    text-align: center;
+  }
+  .footer-social-networks {
+    align-items: center;
+  }
+  .footer-subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-subscription {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-subscription__label {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  .text-footer-social-networks {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .footer {
+    height: 604px;
+  }
+  .footer-main {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .footer-main .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-right: 0%;
+  }
+  /* ----- footer sección dirección ------ */
+  .footer-address {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .footer-social-networks {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .footer-subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0%;
+    width: 100%;
+  }
+  .form-subscription {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-subscription__label {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  .text-footer-social-networks {
+    text-align: center;
+  }
+}
 .backdrop {
   position: fixed;
   top: 0%;

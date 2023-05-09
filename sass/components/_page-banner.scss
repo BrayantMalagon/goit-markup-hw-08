@@ -41,3 +41,42 @@
     cursor: pointer;
   }
 }
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .banner {
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 769px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    &__title {
+      font-size: 26px;
+      line-height: 42px;
+      width: 360px;
+    }
+    &__button {
+      padding: 10px 20px;
+    }
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .banner {
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 480px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    &__title {
+      font-size: 26px;
+      line-height: 42px;
+      width: 360px;
+    }
+    &__button {
+      padding: 10px 20px;
+    }
+  }
+}

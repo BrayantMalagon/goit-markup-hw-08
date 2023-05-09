@@ -8,7 +8,7 @@
 .logo {
   font-weight: 700;
   font-size: 26px;
-  margin-right: 93px;
+  margin-right: 68px;
   color: $main-color;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
@@ -19,12 +19,13 @@
   align-items: center;
   &__nav {
     height: 100%;
-    width: 393px;
+    display: flex;
+    align-items: center;
   }
   &__list {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0%;
     margin: 0%;
@@ -39,6 +40,7 @@
     font-weight: 700;
     position: relative;
     transition: color 250ms $cubic;
+    margin: 0px 25px 0px 25px;
   }
   &__list a:hover,
   &__list a:focus {
@@ -65,12 +67,18 @@
   }
 }
 .menucontact {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__list {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
+    padding: 0%;
+    margin: 0%;
   }
   &__item {
     display: flex;
@@ -93,7 +101,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    margin-right: 50px;
+    margin-right: 40px;
     margin-left: 10px;
     transition: color 250ms $cubic;
   }
@@ -103,5 +111,44 @@
     margin-bottom: 0px;
     fill: $text-grey;
     transition: fill 250ms $cubic;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .logo {
+    font-size: 24px;
+    margin-left: 15px;
+  }
+  .menucontact {
+    &__list {
+      display: block;
+      margin-right: 15px;
+    }
+    &__link {
+      font-size: 12px;
+      font-weight: 500;
+      margin: 5px 0px 5px 20px;
+      text-align: left;
+      width: 100%;
+    }
+    &__item {
+      position: relative;
+      display: block;
+    }
+    &__icon {
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 5px;
+    }
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .menu {
+    &__list {
+      display: none;
+    }
+  }
+  .menucontact {
+    display: none;
   }
 }

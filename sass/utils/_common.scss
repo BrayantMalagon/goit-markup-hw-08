@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  color: var(--text-black);
+  color: $text-black;
   display: flex;
   flex-direction: column;
 }
@@ -8,4 +8,14 @@ body {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .container {
+    width: 769px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .container {
+    width: 480px;
+  }
 }
