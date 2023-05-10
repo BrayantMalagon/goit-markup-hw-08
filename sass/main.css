@@ -7,23 +7,24 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  .container {
-    width: 769px;
-  }
-}
 @media screen and (max-width: 768px) {
   .container {
-    width: 480px;
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 480px;
   }
 }
 .header {
   height: 80px;
+  width: 100%;
   border-bottom: 1px solid #ececec;
   display: flex;
   align-items: center;
@@ -33,7 +34,7 @@ body {
 .logo {
   font-weight: 700;
   font-size: 26px;
-  margin-right: 68px;
+  margin-right: 90px;
   color: #2196f3;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
@@ -58,6 +59,7 @@ body {
   padding: 0%;
   margin: 0%;
   height: 100%;
+  min-width: 220px;
 }
 .menu__list a {
   color: #212121;
@@ -68,7 +70,6 @@ body {
   font-weight: 700;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin: 0px 25px 0px 25px;
 }
 .menu__list a:hover, .menu__list a:focus {
   color: #2196f3;
@@ -102,14 +103,14 @@ body {
 .menucontact__list {
   list-style: none;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-around;
-  flex-direction: row;
   padding: 0%;
   margin: 0%;
 }
 .menucontact__item {
   display: flex;
+  position: relative;
 }
 .menucontact__item:hover .menucontact__icon, .menucontact__item:focus .menucontact__icon {
   fill: #2196f3;
@@ -126,9 +127,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 700;
-  margin-right: 40px;
-  margin-left: 10px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 10px;
+  margin-right: 15px;
 }
 .menucontact__icon {
   width: 16px;
@@ -136,12 +137,26 @@ body {
   margin-bottom: 0px;
   fill: #757575;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  left: -10px;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
+  .header {
+    max-width: 768px;
+  }
   .logo {
     font-size: 24px;
-    margin-left: 15px;
+    margin-right: 0;
+  }
+  .menu {
+    width: 400px;
+    min-width: 327px;
+    justify-content: space-between;
+  }
+  .menu__list {
+    min-width: 200px;
+    justify-content: space-around;
   }
   .menucontact__list {
     display: block;
@@ -165,7 +180,7 @@ body {
     top: 5px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .menu__list {
     display: none;
   }
@@ -177,13 +192,14 @@ body {
   background-image: url(./../images/Team.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: auto;
+  background-size: cover;
   height: 600px;
+  width: 100%;
   display: flex;
 }
 .banner__backgroun--rbga {
   background: rgba(47, 48, 58, 0.4);
-  width: 1600px;
+  width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -217,12 +233,12 @@ body {
   cursor: pointer;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .banner {
     margin-left: auto;
     margin-right: auto;
     height: 400px;
-    width: 769px;
+    max-width: 768px;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -236,7 +252,7 @@ body {
     padding: 10px 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .banner {
     margin-left: auto;
     margin-right: auto;
@@ -258,10 +274,12 @@ body {
   }
 }
 .values {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
   margin-top: 95px;
   margin-bottom: 95px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -292,16 +310,13 @@ body {
   font-size: 14px;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .values {
-    flex-wrap: wrap;
     margin-top: 60px;
     margin-bottom: 60px;
   }
   .card {
-    width: 354px;
-    margin-left: 15px;
-    margin-right: 15px;
+    max-width: 354px;
   }
   .card__bg {
     width: 100%;
@@ -313,7 +328,7 @@ body {
     letter-spacing: 0.03em;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .values {
     flex-wrap: wrap;
     margin-top: 60px;
@@ -410,7 +425,7 @@ body {
 
 .card-team {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .card-team__box {
   text-align: center;

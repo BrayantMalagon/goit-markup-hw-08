@@ -1,8 +1,10 @@
 .values {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
   margin-top: 95px;
   margin-bottom: 95px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .card {
   width: 270px;
@@ -31,16 +33,13 @@
     font-size: 14px;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .values {
-    flex-wrap: wrap;
     margin-top: 60px;
     margin-bottom: 60px;
   }
   .card {
-    width: 354px;
-    margin-left: 15px;
-    margin-right: 15px;
+    max-width: 354px;
     &__bg {
       width: 100%;
     }
@@ -52,7 +51,7 @@
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .values {
     flex-wrap: wrap;
     margin-top: 60px;

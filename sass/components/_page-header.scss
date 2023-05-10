@@ -1,5 +1,6 @@
 .header {
   height: 80px;
+  width: 100%;
   border-bottom: 1px solid #ececec;
   display: flex;
   align-items: center;
@@ -8,7 +9,7 @@
 .logo {
   font-weight: 700;
   font-size: 26px;
-  margin-right: 68px;
+  margin-right: 90px;
   color: $main-color;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
@@ -30,6 +31,7 @@
     padding: 0%;
     margin: 0%;
     height: 100%;
+    min-width: 220px;
   }
   &__list a {
     color: $text-black;
@@ -40,7 +42,6 @@
     font-weight: 700;
     position: relative;
     transition: color 250ms $cubic;
-    margin: 0px 25px 0px 25px;
   }
   &__list a:hover,
   &__list a:focus {
@@ -74,14 +75,14 @@
   &__list {
     list-style: none;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
-    flex-direction: row;
     padding: 0%;
     margin: 0%;
   }
   &__item {
     display: flex;
+    position: relative;
   }
   &__item:hover &__icon,
   &__item:focus &__icon {
@@ -101,9 +102,9 @@
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    margin-right: 40px;
-    margin-left: 10px;
     transition: color 250ms $cubic;
+    margin-left: 10px;
+    margin-right: 15px;
   }
   &__icon {
     width: 16px;
@@ -111,12 +112,26 @@
     margin-bottom: 0px;
     fill: $text-grey;
     transition: fill 250ms $cubic;
+    position: absolute;
+    left: -10px;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
+  .header {
+    max-width: 768px;
+  }
   .logo {
     font-size: 24px;
-    margin-left: 15px;
+    margin-right: 0;
+  }
+  .menu {
+    width: 400px;
+    min-width: 327px;
+    justify-content: space-between;
+    &__list {
+      min-width: 200px;
+      justify-content: space-around;
+    }
   }
   .menucontact {
     &__list {
@@ -142,7 +157,7 @@
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .menu {
     &__list {
       display: none;

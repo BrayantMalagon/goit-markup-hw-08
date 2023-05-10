@@ -5,17 +5,17 @@ body {
   flex-direction: column;
 }
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  .container {
-    width: 769px;
-  }
-}
 @media screen and (max-width: 768px) {
   .container {
-    width: 480px;
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 480px;
   }
 }
