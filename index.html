@@ -52,6 +52,11 @@
           </li>
         </ul>
       </main>
+      <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
     </header>
     <!-- Banner principal-->
       <main class="banner">
@@ -389,6 +394,47 @@
         </div>
       </main>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="icon-modal">
+          <use href="./images/icons.svg#icon-x"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">Estudio</a></li>
+        <li><a href="" class="link">Portafolio</a></li>
+        <li><a href="" class="link">contacto</a></li>
+      </ul>
+      <div>
+        <ul class="toggle-contact">
+          <li class="toggle-contact__item">
+            <a href="tel:+525555296000" class="toggle-contact__link--blue">+1 212-772-4150</a>
+          </li>
+          <li class="toggle-contact__item">
+            <a href="mailto:info@devstudio.com" class="toggle-contact__link">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="toggle-social">
+          <li class="toggle-social__item">
+            <a href="" class="toggle-social__link">Instagram</a>
+          </li>
+          <li class="toggle-social__item">
+            <div class="toggle-social__line"></div>
+            <a href="" class="toggle-social__link">Twitter</a>
+          </li>
+          <li class="toggle-social__item">
+            <div class="toggle-social__line"></div>
+            <a href="" class="toggle-social__link">Facebook</a>
+          </li>
+          <li class="toggle-social__item">
+            <div class="toggle-social__line"></div>
+            <a href="" class="toggle-social__link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
