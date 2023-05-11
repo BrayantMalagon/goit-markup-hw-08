@@ -42,6 +42,13 @@
     cursor: pointer;
   }
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .banner {
+    background-image: url('./../images/Team@2x.jpg');
+  }
+}
 @media screen and (max-width: 768px) {
   .banner {
     margin-left: auto;

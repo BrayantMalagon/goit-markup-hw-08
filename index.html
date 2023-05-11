@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <!-- Link hoja de estilos -->
-    <link rel="stylesheet" href="./sass/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <!--Normalización de estilos (Normalize styles) -->
     <link
     rel="stylesheet"
@@ -169,19 +169,22 @@
       </article>
     </section>
     <!-- Seccione de imágenes "A que nos dedicamos"-->
-    <section class="container">
+    <section class="services-img container">
       <h2 class="second-section-subtitle">A qué nos dedicamos</h2>
       <ul class="card-images">
         <li class="card-images__item">
-          <img src="./images/Desk.jpg" alt="tablet" class="card-images__link" />
+          <img srcset="./images/Desk.jpg 1x,./images/Desk@2x.jpg  2x"
+          src="./images/Desk.jpg" alt="tablet" class="card-images__link" />
           <p class="card-images__p">APLICACIONES DE ESCRITORIO</p>
         </li>
         <li class="card-images__item">
-          <img src="./images/Cell and pc.jpg" alt="telephone_pc" class="card-images__link" />
+          <img srcset="./images/Cell and pc.jpg 1x,./images/Cell and pc@2x.jpg  2x" 
+          src="./images/Cell and pc.jpg" alt="telephone_pc" class="card-images__link" />
           <p class="card-images__p">APLICACIONES MÓVILES</p>
         </li>
         <li class="card-images__item">
-          <img src="./images/tablet.jpg" alt="tablet and colors" class="card-images__link" />
+          <img srcset="./images/tablet.jpg 1x,./images/tablet@2x.jpg  2x" 
+          src="./images/tablet.jpg" alt="tablet and colors" class="card-images__link" />
           <p class="card-images__p">SOLUCIONES DE DISEÑO</p>
         </li>
       </ul>
@@ -191,7 +194,8 @@
       <h2 class="third-section-subtitle">Nuestro Equipo</h2>
       <main class="card-team container">
         <article class="card-team__box">
-          <img src="./images/Andres.jpg" alt="Andres Cubo" class="card-team__images" />
+          <img srcset="./images/Andres.jpg 1x,./images/Andres@2x.jpg  2x" 
+          src="./images/Andres.jpg" alt="Andres Cubo" class="card-team__images" />
           <h4 class="card-team__names">
             Andres Cubo</h4>
           <p class="card-team__post">Diseñador de Productos</p>
@@ -219,7 +223,8 @@
           </main>
         </article>
         <article class="card-team__box">
-          <img src="./images/Carla.jpg" alt="Carla Palacios" class="card-team__images" />
+          <img srcset="./images/Carla.jpg 1x,./images/Carla@2x.jpg  2x" 
+          src="./images/Carla.jpg" alt="Carla Palacios" class="card-team__images" />
           <h4 class="card-team__names">Carla Palacios</h4>
           <p class="card-team__post">Desarrolladora Frontend</p>
           <main class="card-team-box-icons">
@@ -246,7 +251,8 @@
           </main>
         </article>
         <article class="card-team__box">
-          <img src="./images/Mario.jpg" alt="Mario Dora" class="card-team__images" />
+          <img srcset="./images/Mario.jpg 1x,./images/Mario@2x.jpg  2x" 
+          src="./images/Mario.jpg" alt="Mario Dora" class="card-team__images" />
           <h4 class="card-team__names">Mario Dora</h4>
           <p class="card-team__post">Marketing</p>
           <main class="card-team-box-icons">
@@ -273,7 +279,8 @@
           </main>
         </article>
         <article class="card-team__box">
-          <img src="./images/Pablo.jpg" alt="Pablo Mijangos" class="card-team__images" />
+          <img srcset="./images/Pablo.jpg 1x,./images/Pablo@2x.jpg  2x" 
+          src="./images/Pablo.jpg" alt="Pablo Mijangos" class="card-team__images" />
           <h4 class="card-team__names">Pablo Mijangos</h4>
           <p class="card-team__post">Diseñador IU</p>
           <main class="card-team-box-icons">

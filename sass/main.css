@@ -142,7 +142,16 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
   .menu-toggle {
+    display: none;
+  }
+  .toggle-contact {
+    display: none;
+  }
+  .toggle-social {
     display: none;
   }
 }
@@ -351,6 +360,11 @@ body {
   cursor: pointer;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .banner {
+    background-image: url("./../images/Team@2x.jpg");
+  }
+}
 @media screen and (max-width: 768px) {
   .banner {
     margin-left: auto;
@@ -468,6 +482,10 @@ body {
     letter-spacing: 0.03em;
   }
 }
+.services-img {
+  width: 100%;
+}
+
 .second-section-subtitle {
   font-family: "Roboto", sans-serif;
   color: #212121;
@@ -480,8 +498,11 @@ body {
 .card-images {
   list-style: none;
   margin: 0px 0px 94px 0px;
+  padding: 0%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   font-family: "roboto";
   font-weight: 700;
   font-size: 14px;
@@ -493,10 +514,9 @@ body {
   margin: 0px;
   display: flex;
   justify-content: center;
-}
-.card-images__link {
-  width: 373.16px;
-  margin: 0px;
+  max-width: 370px;
+  min-width: 300px;
+  margin-bottom: 10px;
 }
 .card-images__p {
   background-color: rgba(47, 48, 58, 0.8);
@@ -511,7 +531,7 @@ body {
   margin: 0px;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .second-section-subtitle {
     display: none;
   }
@@ -519,7 +539,7 @@ body {
     display: none;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .second-section-subtitle {
     display: none;
   }
@@ -1071,6 +1091,30 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 450px;
+  }
+  /* ------ Formulario Modal ------ */
+  .form {
+    width: 370px;
+  }
+  .form h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+  /* ------ Formulario Modal ------ */
+  .form {
+    width: 370px;
+  }
+  .form h2 {
+    text-align: center;
+  }
+}
 .submenu-list {
   display: flex;
   justify-content: center;

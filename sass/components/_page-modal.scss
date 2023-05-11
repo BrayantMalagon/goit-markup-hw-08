@@ -161,7 +161,27 @@
     cursor: pointer;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 450px;
+  }
+  /* ------ Formulario Modal ------ */
+  .form {
+    width: 370px;
+    & h2 {
+      text-align: center;
+    }
+  }
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+  /* ------ Formulario Modal ------ */
+  .form {
+    width: 370px;
+    & h2 {
+      text-align: center;
+    }
+  }
 }
